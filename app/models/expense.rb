@@ -6,5 +6,6 @@ class Expense < ActiveRecord::Base
   validates :amount, :presence => true, :numericality => true
   validates :interval, :presence => true
   validates :name, :presence => true
+  validates :start_date, :presence => true
 
 end

@@ -1,14 +1,15 @@
-<h1>Dashboard</h1>
-<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-<h2>Incomes</h2>
-<ul>
-  <li><%= link_to "Incomes", admin_incomes_path %></li>
+<div class="page-header">
+<h1>Dashboard</h1></div>
+ Welcome back <%= current_user.first_name %> !
+<ul class="nav nav-list">
+	  <li class="nav-header">Income</li>
+  <li><%= link_to "List of Incomes", admin_incomes_path %></li>
   <li><%= link_to "New Income", new_admin_income_path %></li>
+ 	<li class="nav-header">Expense</li>
+  <li><%= link_to "List of Expenses", admin_expenses_path %></li>
+  <li><%= link_to "New Expense", new_admin_expense_path %></li>
+    <li class="divider"></li>
+<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
 </ul>
 
-<h2>Expenses</h2>
-<ul>
-  <li><%= link_to "Expenses", admin_expenses_path %></li>
-  <li><%= link_to "New Expense", new_admin_expense_path %></li>
-</ul>
 

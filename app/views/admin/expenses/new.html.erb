@@ -1,3 +1,9 @@
+<div class="page-header">
 <h1>New Expense</h1>
-<%= link_to "Back to List of Expenses", admin_expenses_path %>
+<ul class="nav nav-list">
+  <li>  <%= link_to "Back to Dashboard", admin_root_path %> </li>
+  <li><%= link_to "Back to List of Expenses", admin_expenses_path %></li>
+</ul>
+</div>
+
 <%= render :partial => "form", :locals => { :expense => @expense } %>
