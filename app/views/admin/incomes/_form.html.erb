@@ -1,0 +1,7 @@
+<%= simple_form_for([:admin,income]) do |f| %>
+  <%= f.input :amount %>
+  <%= f.input :name %>
+  <%= f.input :interval %>
+    <%= f.input :start_date %>
+  <%= f.submit "Submit" %>
+<% end %>

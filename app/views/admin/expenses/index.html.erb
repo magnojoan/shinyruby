@@ -1,0 +1,33 @@
+<h1>Expenses</h1>
+<%= link_to "Dashboard", admin_root_path %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Name</th>
+      <th>Interval</th>
+      <th>Start Date</th>
+      <th>User ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @expenses.each do |p| %>
+      <tr>
+        <td><%= p.amount %></td>
+        <td><%= p.name %></td>
+        <td><%= p.interval %></td>
+        <td><%= p.start_date %></td>
+        <td><%= p.user_id %></td>
+        <td>
+          <%= link_to "Edit", edit_admin_expense_path(p) %>
+          |
+          <%= link_to "Destroy", admin_expense_path(p), :method => :delete, :confirm => "sure man?" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New Expense", new_admin_expense_path %>

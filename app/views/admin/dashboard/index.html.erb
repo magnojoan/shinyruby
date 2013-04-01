@@ -1,0 +1,14 @@
+<h1>Dashboard</h1>
+<%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+<h2>Incomes</h2>
+<ul>
+  <li><%= link_to "Incomes", admin_incomes_path %></li>
+  <li><%= link_to "New Income", new_admin_income_path %></li>
+</ul>
+
+<h2>Expenses</h2>
+<ul>
+  <li><%= link_to "Expenses", admin_expenses_path %></li>
+  <li><%= link_to "New Expense", new_admin_expense_path %></li>
+</ul>
+
