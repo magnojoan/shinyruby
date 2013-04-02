@@ -1,0 +1,28 @@
+<div class="page-header">
+<h1>View Income</h1>
+<ul class="nav nav-list">
+  <li><%= link_to "Back to List of Incomes", admin_incomes_path %></li>
+  <li><%= link_to "Add Income", new_admin_income_path %></li>
+</ul>
+</div>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Amount</th>
+      <th>Name</th>
+      <th>Interval</th>
+      <th>Start Date</th>
+      <th>User ID</th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <% income = @income %>
+        <td><%= income.amount %></td>
+        <td><%= income.name %></td>
+        <td><%= income.interval %></td>
+        <td><%= income.start_date %></td>
+        <td><%= income.user_id %></td>
+      </tr>
+  </tbody>
+</table>
